@@ -1,0 +1,34 @@
+# Development files
+.git/
+.github/
+.vscode/
+.idea/
+
+# Test files
+*.test.js
+*.test.jsx
+*.spec.js
+*.spec.jsx
+__tests__/
+coverage/
+
+# Documentation (except README)
+INTEGRATION_EXAMPLE.md
+PROJECT_SUMMARY.md
+PUBLISH_NOW.md
+QUICK_START_PUBLISH.md
+README_PUBLISH.md
+NPM_PUBLISHING_GUIDE.md
+SETUP.md
+
+# Build artifacts
+node_modules/
+.DS_Store
+*.log
+
+# Config that shouldn't be published
+.eslintrc*
+.prettierrc*
+.editorconfig
+publish.sh
+

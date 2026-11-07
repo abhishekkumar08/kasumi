@@ -1,0 +1,106 @@
+{
+  "name": "@kasumi/ui",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Kasumi: a glass-first React design system. Tokens, a Tailwind plugin, accessible components and Storybook.",
+  "type": "module",
+  "main": "./src/index.js",
+  "sideEffects": [
+    "./src/font.js",
+    "*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./src/index.d.ts",
+      "default": "./src/index.js"
+    },
+    "./theme": "./src/theme/index.js",
+    "./components": "./src/components/index.js",
+    "./tailwind-config": "./tailwind.config.js",
+    "./eslint": "./eslint.js",
+    "./vite": "./vite.js",
+    "./font": "./src/font.js",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "vite build",
+    "build:package": "vite build",
+    "lint": "eslint \"src/**/*.{js,jsx}\"",
+    "lint:fix": "eslint \"src/**/*.{js,jsx}\" --fix",
+    "type-check": "tsc --noEmit -p tsconfig.json",
+    "format": "prettier --write \"src/**/*.{js,jsx,json,css}\"",
+    "format:check": "prettier --check \"src/**/*.{js,jsx,json,css}\"",
+    "verify": "npm run check && npm run build",
+    "storybook": "STORYBOOK_DISABLE_TELEMETRY=1 storybook dev -p 6006 --no-open --disable-telemetry",
+    "build-storybook": "STORYBOOK_DISABLE_TELEMETRY=1 storybook build -o storybook-static --disable-telemetry",
+    "contrast": "node scripts/contrast.mjs --strict",
+    "check": "npm run lint && npm run type-check && npm run contrast && node src/utils/cn.check.mjs && node src/utils/dateRange.check.mjs && node src/utils/formatClock.check.mjs && node src/utils/amountInWords.check.mjs"
+  },
+  "peerDependencies": {
+    "lucide-react": ">=0.298.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.20.0",
+    "tailwindcss": "^3.4.0",
+    "vite": ">=5.0.0",
+    "recharts": ">=2.10.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.36.0",
+    "@storybook/addon-docs": "10.6.1",
+    "@storybook/react-vite": "10.6.1",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^6.0.3",
+    "autoprefixer": "^10.5.2",
+    "eslint": "^9.36.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^5.2.0",
+    "eslint-plugin-react-refresh": "^0.4.22",
+    "globals": "^16.4.0",
+    "lucide-react": "0.298.0",
+    "postcss": "^8.5.16",
+    "prettier": "^3.6.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.30.4",
+    "recharts": "2.15.4",
+    "storybook": "10.6.1",
+    "tailwindcss": "3.4.19",
+    "typescript": "^5.3.3",
+    "vite": "^8.1.4"
+  },
+  "keywords": [
+    "design-system",
+    "react",
+    "tailwind",
+    "glassmorphism",
+    "accessible",
+    "dark-mode",
+    "storybook",
+    "kasumi"
+  ],
+  "author": "Abhishek Kumar",
+  "license": "MIT",
+  "files": [
+    "src",
+    "tailwind.config.js",
+    "eslint.js",
+    "vite.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "dependencies": {
+    "@fontsource-variable/inter": "^5.3.0",
+    "clsx": "^2.1.1",
+    "tailwind-merge": "^3.6.0"
+  },
+  "types": "./src/index.d.ts",
+  "peerDependenciesMeta": {
+    "vite": {
+      "optional": true
+    }
+  }
+}

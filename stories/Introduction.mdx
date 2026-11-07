@@ -1,0 +1,22 @@
+import { Meta } from "@storybook/addon-docs/blocks";
+
+<Meta title="Introduction" />
+
+# Kasumi
+
+`@kasumi/ui`: a glass-first React design system (霞, *kasumi*, mist). Tokens, a Tailwind plugin and accessible components; the MoneyWise apps are built from it.
+
+**Toolbar:** switch **Theme** (light / dark) and **Material** (glass / solid) at the top. Every story re-renders in the chosen combination, the same way the apps do it: `dark` and `glass` classes on `<html>`, set by `ThemeProvider`.
+
+| Group        | What's in it                                                                                                 |
+| ------------ | ------------------------------------------------------------------------------------------------------------ |
+| Foundations  | Colour roles, chart palette, type scale                                                                      |
+| Actions      | Button, IconButton                                                                                           |
+| Forms        | Input (with leading/trailing slots), Select, Textarea, Checkbox, RadioGroup, Switch, DateRange, FileDropzone |
+| Navigation   | Tabs, SegmentedControl, Pagination, Menu, Disclosure                                                         |
+| Data display | Card, Stat, StatCard, Progress, Badge, Avatar, Table, ChartTooltip                                           |
+| Feedback     | Alert, toasts, Spinner, Skeleton, EmptyState, ErrorState                                                     |
+| Overlays     | Modal, Popover, Tooltip                                                                                      |
+| Layout       | AppLayout (sidebar, top bar, bottom bar, drawer)                                                             |
+
+Rules every component follows: tokens only, `className` merges through `cn()`, keyboard operable, visible focus ring, works in both themes and both materials, user-visible strings in `src/constants/`. Token reference: `TOKENS.md` in the repo root.

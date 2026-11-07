@@ -1,0 +1,7 @@
+#!/usr/bin/env sh
+# Lint, types, the worst-case contrast gate and the cn() check. Enable once
+# per clone: git config core.hooksPath .githooks
+npm run --silent check || {
+  echo "Kasumi checks failed. Run: npm run check"
+  exit 1
+}
